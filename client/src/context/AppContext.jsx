@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { dummyUserData, dummyChats } from "../assets/assets";
 
 
 const AppContext = createContext();
@@ -17,8 +18,8 @@ export const AppContextProvider = ({ children }) => {
     }
 
     const fetchUserChats = async () => {
-        setChats(dummyChat)
-        setSelectedChat(dummyChat[0])
+        setChats(dummyChats)
+        setSelectedChat(dummyChats[0])
     }
 
     useEffect(() => {
